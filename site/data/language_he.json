@@ -1,3 +1,8 @@
 {
-    "site_title": "Site title"
+    "site_title": "Site title",
+    "phone": "03-6515885",
+    "send": "שלח פרטים",
+    "menu_about": "אודותיינו",
+    "menu_contact": "צרו קשר",
+    "title_form": "מלא את הטופס ונציג שלנו יחזור אלייכם"
 }

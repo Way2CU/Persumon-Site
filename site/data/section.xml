@@ -7,10 +7,10 @@
   <section name="about">
     <language name="all" file="about.xml" />
   </section>
-  <section name="advertisements">
+  <section name="media">
     <language name="all">
-      <action name="_default" file="advertisements.xml"/>
-      <action name="view" file="advertisement_view.xml">
+      <action name="_default" file="media.xml" />
+      <action name="advertisement" file="advertisement.xml" />
     </language>
   </section>
 </document>

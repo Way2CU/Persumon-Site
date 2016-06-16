@@ -1,0 +1,33 @@
+<document>
+  <!-- media group article list -->
+  <div class="menu red">
+    <cms:module
+      name="articles"
+      action="show_group"
+      text_id="media"
+      template="parts/menu_group_link.xml"
+      />
+    <ul>
+      <cms:module
+        name="articles"
+        action="show_list"
+        group="media"
+        template="parts/menu_links.xml"
+        >
+        <param name="type" value="list"/>
+      </cms:module>
+    </ul>
+  </div>
+
+  <!-- ads group article list -->
+  <div class="menu">
+    <cms:module
+      name="articles"
+      action="show_list"
+      group="ads"
+      template="parts/menu_links.xml"
+      >
+      <param name="type" value="plain"/>
+    </cms:module>
+  </div>
+</document>

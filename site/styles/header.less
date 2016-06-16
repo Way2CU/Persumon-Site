@@ -1,0 +1,201 @@
+/**
+ * Header Style Sheet
+ * Prisomon Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+header {
+  background-color: @color_bright_text;
+}
+
+header div.top {
+  padding: 0px calc(~'(100% - 1200px)' / 2);
+}
+
+header a,
+header nav#main {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 0.5em;
+}
+
+header a {
+  text-decoration: none;
+  color: @color_text;
+  padding: 1.5em;
+  transition: all 0.3s;
+}
+
+header a:hover {
+  background-color: @color_highlight;
+  color: @color_bright_text;
+}
+
+header a.logo {
+  width: 230px;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  padding: 0;
+}
+
+header a.logo img {
+  display: block;
+  width: 100%;
+}
+
+header nav#main svg {
+  width: 3em;
+  height: 3em;
+  fill: darken(@color_background, 10%);
+  transition: all 0.3s;
+}
+
+header nav#main:hover svg {
+  fill: @color_highlight;
+}
+
+header div.float {
+  float: left;
+}
+
+header div.float a.phone {
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+}
+
+header div.float a.phone svg {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  width: 1.5em;
+  height: 1.5em;
+  fill: @color_highlight;
+  transition: all 0.3s;
+}
+
+header div.float a.phone:hover svg {
+  fill: @color_bright_text;
+}
+
+/**
+ * header form
+ */
+header div.form_wrap {
+  background-color: @form_background;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  clear: both;
+}
+
+header div.form_wrap h4 {
+  margin-top: 0;
+  font-weight: 400;
+  color: @color_bright_text;
+}
+
+header div.form_wrap form label {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: right;
+}
+
+header div.form_wrap form label span {
+  display: inline-block;
+  vertical-align: middle;
+  color: @color_bright_text;
+  position: relative;
+}
+
+header div.form_wrap form label span:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../images/form-icons.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 200px 50px;
+  width: 50px;
+  height: 50px;
+}
+
+header div.form_wrap form label input {
+  display: block;
+  padding: 0.5em 0.2em;
+  border: 1px solid @color_bright_text;
+  width: 250px;
+  transition: all 0.3s;
+}
+
+header div.form_wrap form label input:active,
+header div.form_wrap form label input:hover {
+  border: 1px solid lighten(@color_highlight, 10%);
+}
+
+header div.form_wrap form div.controls {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+header div.form_wrap form div.controls button {
+  padding: 0.5em 1.5em;
+  border: 1px solid @color_bright_text;
+  background-color: fade(@color_highlight, 80%);
+  color: @color_bright_text;
+  transition: all 0.3s;
+}
+
+header div.form_wrap form div.controls button:hover {
+  background-color: @color_highlight;
+}
+
+/**
+ * Drop dwon menues
+ */
+
+nav#main:hover div.menu{
+  opacity: 1;
+  max-height: 500px;
+  visibility: visible;
+}
+
+div.menu {
+  position: absolute;
+  right: 285px;
+  top: 100%;
+  display: inline-block;
+  vertical-align: top;
+  height: 450px;
+  max-height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  width: 285px;
+  background-color: @color_menu_dark;
+  border: 1px solid @color_bright_text;
+  z-index:  1000;
+  transition: all 0.4s;
+  transition-delay: 0.3s;
+}
+
+div.menu.red {
+  right: 0px;
+  background-color: @color_menu_light;
+}
+
+div.menu ul {
+  margin: 0;
+}
+
+div.menu a {
+  display: block;
+  color: @color_bright_text;
+  padding: 1em;
+}
