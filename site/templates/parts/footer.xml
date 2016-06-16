@@ -1,5 +1,46 @@
 <document>
   <footer>
+    <div class="top">
+      <article>
+        <h1><cms:text constant="slogan"/></h1>
+        <!-- contact information links -->
+        <a
+          href="'tel:'.urlencode(Language::getText('phone'))"
+          cms:eval="href"
+          class="phone"
+          >
+          <cms:text constant="label_phone"/>
+          <cms:svg file="site-sprite.svg" symbol="phone"/>
+        </a>
+        <br/>
+        <a
+          href="'tel:'.urlencode(Language::getText('phone_whatsup'))"
+          cms:eval="href"
+          class="whatsup"
+          >
+          <cms:text constant="label_whatsup"/>
+          <cms:svg file="site-sprite.svg" symbol="whatsapp"/>
+        </a>
+        <br/>
+        <a
+          href="'mailto:'.urlencode(Language::getText('mail'))"
+          cms:eval="href"
+          class="mail"
+          >
+          <cms:text constant="label_mail"/>
+        </a>
+        <br/>
+        <div class="form_wrap">
+          <h4><cms:text constant="title_form"/></h4>
+          <cms:module
+            name="contact_form"
+            action="show"
+            text_id="contact"
+            />
+        </div>
+      </article>
+    </div>
+    <!-- copyright -->
     <cms:template file="stock/copyright.xml">
       <param name="holder" value="copyright_holder"/>
       <param name="text" value="copyright_text"/>

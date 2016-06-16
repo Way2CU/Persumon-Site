@@ -1,7 +1,13 @@
 {
     "site_title": "Site title",
     "phone": "03-6515885",
+    "label_phone": "חייגו עכשיו: 03-6515885",
+    "phone_whatsup": "‫‪052-729-9729‬‬",
+    "label_whatsup": "‫‪ ‫דברו איתי בווטסאפ: 052-729-9729",
+    "mail": "‫‪limor@persumon.co.il‬‬",
+    "label_mail": "‫‪limor@persumon.co.il :לשליחת מיילים ",
     "send": "שלח פרטים",
+    "slogan": "‫און‬ ‫פרסום‬ ‫עם‬ ‫לפרסם‬ ‫ונכון‬ ‫כדאי‬",
     "menu_about": "אודותיינו",
     "menu_contact": "צרו קשר",
     "title_form": "מלא את הטופס ונציג שלנו יחזור אלייכם",
