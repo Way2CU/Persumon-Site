@@ -19,13 +19,14 @@ header nav#main {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  padding: 0.5em;
+  padding: 1em;
+  transition: all 0.3s;
 }
 
 header a {
   text-decoration: none;
   color: @color_text;
-  padding: 1.5em;
+  padding: 2em;
   transition: all 0.3s;
 }
 
@@ -48,13 +49,13 @@ header a.logo img {
 
 header nav#main svg {
   width: 3em;
-  height: 3em;
+  height: 3.05em;
   fill: darken(@color_background, 10%);
   transition: all 0.3s;
 }
 
 header nav#main:hover svg {
-  fill: @color_highlight;
+  fill: @color_bright_text;
 }
 
 header div.float {
@@ -62,8 +63,8 @@ header div.float {
 }
 
 header div.float a.phone {
-  padding-top: 1.4em;
-  padding-bottom: 1.4em;
+  padding-top: 1.9em;
+  padding-bottom: 1.9em;
 }
 
 header div.float a.phone svg {
@@ -158,8 +159,12 @@ header div.form_wrap form div.controls button:hover {
 }
 
 /**
- * Drop dwon menues
+ * Drop down menues
  */
+
+nav#main:hover {
+  background-color: @color_menu_dark;
+}
 
 nav#main:hover div.menu{
   opacity: 1;
@@ -169,8 +174,8 @@ nav#main:hover div.menu{
 
 div.menu {
   position: absolute;
-  right: 285px;
-  top: 100%;
+  right: 286px;
+  top: 101%;
   display: inline-block;
   vertical-align: top;
   height: 450px;
@@ -179,7 +184,12 @@ div.menu {
   visibility: hidden;
   width: 285px;
   background-color: @color_menu_dark;
-  border: 1px solid @color_bright_text;
+  border-top: 5px solid @color_menu_dark;
+  border-bottom: none;
+  border-left: 1px solid fade(@color_bright_text, 50%);
+  border-right: 1px solid fade(@color_bright_text, 50%);
+  box-shadow: 0px 5px 3px fade(@color_menu_dark, 50%);
+  box-sizing: border-box;;
   z-index:  1000;
   transition: all 0.4s;
   transition-delay: 0.3s;
@@ -187,11 +197,12 @@ div.menu {
 
 div.menu.red {
   right: 0px;
-  background-color: @color_menu_light;
+  background-color: mix(@color_menu_dark, @color_menu_light,50%);
 }
 
 div.menu ul {
   margin: 0;
+  color: @color_highlight;
 }
 
 div.menu a {
