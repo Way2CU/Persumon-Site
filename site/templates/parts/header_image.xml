@@ -1,0 +1,9 @@
+<document>
+  <div 
+    class="header"
+    style="'background-image: url('.gallery::getThumbnailById($params['id'],null, 1200, Thumbnail::CONSTRAIN_HEIGHT).');'"
+    cms:eval="style"
+    >
+    <h2><cms:var param="title" multilanguage="yes"/></h2>
+  </div>
+</document>

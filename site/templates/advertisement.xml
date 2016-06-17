@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+  <cms:var name="_DOCTYPE"/>
+  <html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+    <head>
+      <title>
+        <cms:text constant="site_title"/>
+        <cms:raw text=" - "/>
+        <cms:text constant="title_advertisment"/>
+      </title>
+      <cms:module name="head_tag" action="print_tag"/>
+    </head>
+
+  <body>
+      <!-- Top section of the site -->
+      <cms:template file="parts/header.xml"/>
+        <!-- header image -->
+        <cms:module
+          name="gallery"
+          action="show_image"
+          text_id="media"
+          template="parts/header_image.xml"
+          />
+
+      <section class="advertisment">
+        <cms:module
+          name="articles"
+          action="show_list"
+          group="media"
+          template="parts/home_page_links.xml"
+          >
+          <param name="type" value="plain"/>
+        </cms:module>
+      </section>
+      <!-- Bottom section of the site -->
+      <cms:template file="parts/footer.xml"/>
+    </body>
+  </html>
+</document>
