@@ -3,6 +3,9 @@
     <div class="top">
       <article>
         <h1><cms:text constant="slogan"/></h1>
+        <!-- logo -->
+        <img src="_BASEURL.'/site/images/logo-vertical.png'"  alt="logo-vertical" cms:eval="src"/>
+
         <!-- contact information links -->
         <a
           href="'tel:'.urlencode(Language::getText('phone'))"
