@@ -1,0 +1,88 @@
+/**
+ * Header mobile Style Sheet
+ * Prisomon Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+.mobile_title {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  background-color: @color_bright_text;
+  text-align: center;
+}
+
+.mobile_title a.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+}
+
+.mobile_title a.logo img {
+  display: block;
+  width: 100%;
+}
+
+.mobile_title a.menu,
+.mobile_title a.phone {
+  position: absolute;
+  padding: 0.5em;
+  top: 50%;
+  right: 0;
+  margin-top: -2em;
+}
+
+.mobile_title a.phone {
+  right: auto;
+  left: 0;
+}
+
+.mobile_title a.menu svg,
+.mobile_title a.phone svg {
+  width: 3em;
+  height: 3em;
+}
+
+.mobile_title a.phone svg {
+  fill: @color_highlight;
+}
+
+.mobile_title a.menu svg {
+  fill: darken(@color_background, 50%);
+}
+
+.mobile_menu {
+  overflow-y: scroll;
+  padding-bottom: 8em;
+}
+
+.mobile_menu.visible {
+  width: 100%;
+}
+
+.mobile_menu ul {
+  margin: 0;
+  color: @color_highlight;
+}
+
+.mobile_menu ul li:last-of-type a {
+  border-bottom: none;
+}
+
+.mobile_menu a {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: block;
+  color: @color_bright_text;
+  border-bottom: 1px solid @color_bright_text;
+}
+
+.seperator {
+  background-color: @color_menu_dark;
+}
+
+nav.mobile_menu > a,
+.seperator.red {
+  background-color: mix(@color_menu_dark, @color_menu_light,50%);
+}

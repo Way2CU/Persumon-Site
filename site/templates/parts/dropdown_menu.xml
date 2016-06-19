@@ -1,6 +1,6 @@
 <document>
   <!-- media group article list -->
-  <div class="menu red">
+  <div class="_DESKTOP_VERSION ? 'menu red' : 'seperator red'" cms:eval="class">
     <cms:module
       name="articles"
       action="show_group"
@@ -20,7 +20,7 @@
   </div>
 
   <!-- ads group article list -->
-  <div class="menu">
+  <div class="_DESKTOP_VERSION ? 'menu red' : 'seperator'" cms:eval="class">
     <cms:module
       name="articles"
       action="show_list"

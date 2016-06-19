@@ -1,20 +1,74 @@
 <document>
   <cms:svg file="site-sprite.svg"/>
   <header>
-    <div class="top">
-    <nav id="main">
-      <cms:svg file="site-sprite.svg" symbol="menu"/>
-
-      <!-- Drop down menu -->
-      <cms:template file="parts/dropdown_menu.xml"/>
-    </nav>
-
-    <!-- site logo -->
-    <a class="logo" href="url_Make('','home')" cms:eval="href">
-      <img src="_BASEURL.'/site/images/logo.png'"  alt="logo" cms:eval="src"/>
-    </a>
     <cms:desktop>
-      <div class="float">
+      <div class="top">
+        <nav id="main">
+          <cms:svg file="site-sprite.svg" symbol="menu"/>
+
+        <!-- Drop down menu -->
+        <cms:template file="parts/dropdown_menu.xml"/>
+        </nav>
+
+        <!-- site logo -->
+        <a class="logo" href="url_Make('','home')" cms:eval="href">
+          <img src="_BASEURL.'/site/images/logo.png'"  alt="logo" cms:eval="src"/>
+        </a>
+        <div class="float">
+          <a
+            class="$section == 'about' ? 'active' : false"
+            href="url_Make('', 'about')"
+            cms:eval="href"
+            cms:optional="class"
+            >
+            <cms:text constant="menu_about"/>
+          </a>
+          <a href="#form">
+            <cms:text constant="menu_contact"/>
+          </a>
+
+          <!--phone link  -->
+          <a
+            href="'tel:'.urlencode(Language::getText('phone'))"
+            cms:eval="href"
+            class="phone"
+            >
+            <cms:text constant="phone"/>
+            <cms:svg file="site-sprite.svg" symbol="phone"/>
+          </a>
+        </div>
+      </div>
+
+      <!-- header form -->
+      <div class="form_wrap">
+        <h4><cms:text constant="title_form"/></h4>
+        <cms:module
+          name="contact_form"
+          action="show"
+          text_id="contact"
+          />
+      </div>
+    </cms:desktop>
+    <!-- mobile header -->
+    <cms:mobile>
+      <div class="mobile_title">
+        <a href="javascript:void(0)" class="menu">
+          <cms:svg file="site-sprite.svg" symbol="menu"/>
+        </a>
+        <!-- logo -->
+        <a class="logo" href="url_Make('','home')" cms:eval="href">
+          <img src="_BASEURL.'/site/images/logo.png'"  alt="logo" cms:eval="src"/>
+        </a>
+        <!--phone link  -->
+        <a
+          href="'tel:'.urlencode(Language::getText('phone'))"
+          cms:eval="href"
+          class="phone"
+          >
+          <cms:svg file="site-sprite.svg" symbol="phone"/>
+        </a>
+      </div>
+      <nav class="mobile_menu">
         <a
           class="$section == 'about' ? 'active' : false"
           href="url_Make('', 'about')"
@@ -26,28 +80,8 @@
         <a href="#form">
           <cms:text constant="menu_contact"/>
         </a>
-
-        <!--phone link  -->
-        <a
-          href="'tel:'.urlencode(Language::getText('phone'))"
-          cms:eval="href"
-          class="phone"
-          >
-          <cms:text constant="phone"/>
-          <cms:svg file="site-sprite.svg" symbol="phone"/>
-        </a>
-      </div>
-    </cms:desktop>
-    </div>
-
-    <!-- header form -->
-    <div class="form_wrap">
-      <h4><cms:text constant="title_form"/></h4>
-      <cms:module
-        name="contact_form"
-        action="show"
-        text_id="contact"
-        />
-    </div>
+        <cms:template file="parts/dropdown_menu.xml"/>
+      </nav>
+    </cms:mobile>
   </header>
 </document>
