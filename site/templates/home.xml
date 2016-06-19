@@ -29,6 +29,15 @@
 				  >
 				  <param name="type" value="plain"/>
 				</cms:module>
+
+				<cms:module
+				  name="articles"
+				  action="show"
+				  group="media"
+				  template="parts/home_page_links.xml"
+				  >
+				  <param name="type" value="plain"/>
+				</cms:module>
 			</section>
 
 			<div class="fixed">
