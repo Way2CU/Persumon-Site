@@ -4,14 +4,14 @@
     <cms:module
       name="articles"
       action="show_group"
-      text_id="media"
+      text_id="ads"
       template="parts/menu_group_link.xml"
       />
     <ul>
       <cms:module
         name="articles"
         action="show_list"
-        group="media"
+        group="ads"
         template="parts/menu_links.xml"
         >
         <param name="type" value="list"/>
@@ -24,7 +24,7 @@
     <cms:module
       name="articles"
       action="show_list"
-      group="ads"
+      group="media"
       template="parts/menu_links.xml"
       >
       <param name="type" value="plain"/>

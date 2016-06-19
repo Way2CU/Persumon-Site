@@ -8,9 +8,9 @@
     <language name="all" file="about.xml" />
   </section>
   <section name="media">
-    <language name="all">
-      <action name="_default" file="media.xml" />
-      <action name="advertisement" file="advertisement.xml" />
-    </language>
+    <language name="all" file="media.xml"/>
+  </section>
+  <section name="advertisement">
+    <language name="all" file="advertisement.xml"/>
   </section>
 </document>

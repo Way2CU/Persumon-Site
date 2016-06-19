@@ -1,6 +1,15 @@
 <document>
-  <a href="url_Make('','media', array('id', $params['id']))" cms:eval="href">
-    <cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
-    <span><cms:var param="title" multilanguage="yes"/></span>
-  </a>
+  <cms:if condition="$template['direct'] == 'ads'">
+    <a href="url_Make($params['text_id'],'advertisement')" cms:eval="href">
+      <cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
+      <span><cms:var param="title" multilanguage="yes"/></span>
+    </a>
+  </cms:if>
+
+  <cms:if condition="$template['direct'] == 'media'">
+    <a href="url_Make($params['text_id'],'media')" cms:eval="href">
+      <cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
+      <span><cms:var param="title" multilanguage="yes"/></span>
+    </a>
+  </cms:if>
 </document>

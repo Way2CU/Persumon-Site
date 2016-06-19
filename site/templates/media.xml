@@ -19,18 +19,38 @@
         <cms:module
           name="gallery"
           action="show_image"
-          text_id="$_REQUEST['name']"
+          text_id="$action"
           template="parts/header_image.xml"
           cms:eval="text_id"
           />
         <!-- content of inner page -->
-        <cms:module
-          name="articles"
-          action="show"
-          text_id="$_REQUEST['name']"
-          template="stock/article_generic.xml"
-          cms:eval="text_id"
-          />
+        <section>
+          <cms:module
+            name="articles"
+            action="show"
+            text_id="$action"
+            template="stock/article_generic.xml"
+            cms:eval="text_id"
+            />
+          <!-- page gallery -->
+          <cms:module
+            name="gallery"
+            action="show_image_list"
+            text_id="$action"
+            template="gallery_images.xml"
+            />
+        </section>
+        <!-- sponsers gallery -->
+        <section class="gallery">
+          <cms:module
+            name="gallery"
+            action="show_image_list"
+            group="$action"
+            order_by="text_id"
+            template="parts/gallery_images.xml"
+            cms:eval="group"
+            />
+        </section>
       <!-- Bottom section of the site -->
       <cms:template file="parts/footer.xml"/>
     </body>

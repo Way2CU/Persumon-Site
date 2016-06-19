@@ -30,6 +30,7 @@ section:before {
 section.table {
   display: table;
   text-align: center;
+  width: 1200px;
 }
 
 section.advertisment a,
@@ -102,24 +103,29 @@ section.advertisment a span,
 section.table a span {
   display: inline-block;
   transition: all 0.3s;
+  transition-delay: 0.3s;
 }
 
 section.advertisment a span {
   position: absolute;
   top: 50%;
-  margin-top: -1em;
-  left: 0;
-  right: 0;
-  height: 2em;
+  margin-top: -1.5em;
+  left: 2em;
+  right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: 1px solid @color_text;
 }
 
 section.advertisment a:hover span,
 section.table a:hover span {
   transform: translateY(3.5em);
+  transition-delay: 0s;
 }
 
 section.advertisment a:hover span {
   transform: translateY(4em);
+  border: 1px solid transparent;
 }
 
 section.advertisment a svg,
@@ -134,14 +140,14 @@ section.table a svg {
   height: 5em;
   fill: @color_bright_text;
   transform: scale(0);
-  transition: all 0.6s;
+  transition: all 0.4s;
   transition-delay: 0s;
 }
 
 section.advertisment a:hover svg,
 section.table a:hover svg {
   transform: scale(1);
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
 }
 
 /**
@@ -195,6 +201,42 @@ div.header:before {
 div.header h2 {
   display: inline-block;
   vertical-align: middle;
-  padding: 3em 7em;
+  padding: 3em 0em;
   background-color: fade(@color_bright_text, 90%);
+  width: 50%;
+}
+
+article {
+  padding: 2em calc(~'(100% - 960px)' / 2);
+}
+
+article h4,
+article h3 {
+  color: @color_gradient;
+}
+
+article h4 {
+  margin: 0;
+}
+
+article ul li,
+article p {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+/**
+ * Sponsers gallery
+ */
+
+section.gallery {
+  text-align: center;
+}
+
+section.gallery img {
+  padding: 0.5em;
+}
+
+section.gallery img:last-of-type {
+  padding-bottom: 0;
 }

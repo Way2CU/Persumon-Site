@@ -1,13 +1,13 @@
 <document>
   <cms:if condition="$template['type'] == 'plain'">
-    <a href="url_Make('','media', array('id', $params['id']))" cms:eval="href">
+    <a href="url_Make($params['text_id'],'media')" cms:eval="href">
       <cms:var param="title" multilanguage="yes"/>
     </a>
   </cms:if>
 
   <cms:if condition="$template['type'] == 'list'">
     <li>
-      <a href="url_Make('advertisement','media', array('id', $params['id']))" cms:eval="href">
+      <a href="url_Make($params['text_id'],'advertisement')" cms:eval="href">
         <cms:var param="title" multilanguage="yes"/>
       </a>
     </li>

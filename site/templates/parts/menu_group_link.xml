@@ -1,7 +1,7 @@
 <document>
-  <a href="url_Make('advertisement','media')" cms:eval="href">
+  <a href="url_Make('','advertisement')" cms:eval="href">
     <cms:if condition="isset($template['icon'])">
-      <cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
+      <cms:svg file="site-sprite.svg" symbol="$template['icon']" cms:eval="symbol"/>
     </cms:if>
     <span><cms:var param="title" multilanguage="yes"/></span>
   </a>
