@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+  <cms:var name="_DOCTYPE"/>
+  <html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+    <head>
+      <title>
+        <cms:text constant="site_title"/>
+        <cms:raw text=" - "/>
+        <cms:text constant="title_advertisment"/>
+      </title>
+      <cms:module name="head_tag" action="print_tag"/>
+    </head>
+
+  <body>
+      <!-- Top section of the site -->
+      <cms:template file="parts/header.xml"/>
+        <!-- header image -->
+        <cms:module
+          name="gallery"
+          action="show_image"
+          text_id="$_REQUEST['name']"
+          template="parts/header_image.xml"
+          cms:eval="text_id"
+          />
+        <!-- content of inner page -->
+        <cms:module
+          name="articles"
+          action="show"
+          text_id="$_REQUEST['name']"
+          template="stock/article_generic.xml"
+          cms:eval="text_id"
+          />
+      <!-- Bottom section of the site -->
+      <cms:template file="parts/footer.xml"/>
+    </body>
+  </html>
+</document>
