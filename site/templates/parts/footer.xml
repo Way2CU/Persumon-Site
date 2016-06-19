@@ -1,5 +1,5 @@
 <document>
-  <footer>
+  <footer id="form">
     <div class="top">
       <article>
         <h1><cms:text constant="slogan"/></h1>
