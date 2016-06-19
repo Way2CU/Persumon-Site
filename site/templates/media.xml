@@ -32,13 +32,6 @@
             template="stock/article_generic.xml"
             cms:eval="text_id"
             />
-          <!-- page gallery -->
-          <cms:module
-            name="gallery"
-            action="show_image_list"
-            text_id="$action"
-            template="gallery_images.xml"
-            />
         </section>
         <!-- sponsers gallery -->
         <section class="gallery">
@@ -46,7 +39,6 @@
             name="gallery"
             action="show_image_list"
             group="$action"
-            order_by="text_id"
             template="parts/gallery_images.xml"
             cms:eval="group"
             />
