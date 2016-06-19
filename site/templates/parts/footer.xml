@@ -17,8 +17,7 @@
         </a>
         <br/>
         <a
-          href="'tel:'.urlencode(Language::getText('phone_whatsup'))"
-          cms:eval="href"
+          href="javascript:void(0)"
           class="whatsup"
           >
           <cms:text constant="label_whatsup"/>
