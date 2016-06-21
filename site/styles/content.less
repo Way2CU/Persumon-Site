@@ -246,3 +246,112 @@ section.gallery img:last-of-type,
 div.gallery img:last-of-type {
   padding-bottom: 0;
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+header a.logo {
+  width: 200px;
+}
+
+footer div.form_wrap form label input,
+header div.form_wrap form label input {
+  width: 170px;
+}
+
+
+footer div.form_wrap form div.controls,
+header div.form_wrap form div.controls,
+footer div.form_wrap form label,
+header div.form_wrap form label {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+section:before {
+  width: auto;
+}
+
+section.table {
+  display: block;
+  width: auto;
+}
+
+section.advertisment {
+  text-align: center;
+}
+
+section.advertisment a,
+section.table a {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+  width: 25%;
+  box-sizing: border-box;
+  height: auto;
+  background-image: linear-gradient( 180deg, @color_highlight 0%, @color_gradient 100%);
+}
+
+section.table a {
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+section.table a:last-of-type {
+  margin-bottom: 0;
+}
+
+section.advertisment a svg,
+section.table a svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.5em;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  top: auto;
+  position: relative;
+  transform: none;
+}
+
+section.advertisment a span,
+section.table a span {
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: none;
+  color: @color_bright_text;
+  border: none;
+}
+
+section.advertisment a:hover span,
+section.table a:hover span {
+  transform: none; 
+  border: none;
+}
+
+div.fixed {
+  background-attachment: scroll;
+}
+
+div.fixed span {
+  font-size: 2.5em;
+}
+
+div.header {
+  background-size: 100% auto;
+  height: calc(~'(100vw * 0.33)');
+}
+
+div.header h2 {
+  line-height: 1em;
+  padding: 1.5em 2em;
+}
+
+article {
+  padding: 0px calc(~'(100% - 700px)' / 2);
+}
+}

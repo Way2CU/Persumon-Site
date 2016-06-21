@@ -51,6 +51,18 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+		// function for displaying drop down menu on tablets
+		var menu = document.getElementById('main');
+		var menues = document.querySelectorAll('div.menu');
+
+		var open_drop_down = function() {
+			for(var i = 0; i < menues.length; i++) {
+				menues[i].classList.toggle('active');
+			}
+		}
+		menu.addEventListener('click', open_drop_down, false);
+
 };
 
 

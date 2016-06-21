@@ -6,8 +6,8 @@
         <nav id="main">
           <cms:svg file="site-sprite.svg" symbol="menu"/>
 
-        <!-- Drop down menu -->
-        <cms:template file="parts/dropdown_menu.xml"/>
+          <!-- Drop down menu -->
+          <cms:template file="parts/dropdown_menu.xml"/>
         </nav>
 
         <!-- site logo -->
