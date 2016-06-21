@@ -49,6 +49,7 @@
           />
       </div>
     </cms:desktop>
+    
     <!-- mobile header -->
     <cms:mobile>
       <div class="mobile_title">

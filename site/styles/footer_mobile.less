@@ -1,0 +1,101 @@
+/**
+ * Footer mobile Style Sheet
+ * Prisomon Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+footer {
+ background-color: black;
+ text-align: center;
+}
+
+footer div.top {
+  padding-top: 1em;
+  background-color: @color_background;
+  background-image: url(../images/skyline.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+
+footer div.top h1 {
+  margin: 0;
+}
+
+footer div.top a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0.7em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+footer div.top a svg {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.2em;
+  width: 2em;
+  height: 2em;
+}
+
+footer div.top a.phone {
+  background-color: @color_highlight;
+  color: @color_bright_text;
+}
+
+footer div.top a.whatsup {
+  background-color: transparent;
+  color: @color_whatsup;
+  border: 1px solid @color_whatsup;
+}
+
+footer div.top a.mail {
+  background-color: transparent;
+  color: @color_text;
+  border: 1px solid @color_text;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+footer div.top a.phone svg {
+  fill: @color_bright_text;
+}
+
+footer div.top article {
+  text-align: right;
+  margin-top: 0.7em;
+  padding: 1.5em;
+  background-image:
+    url(../images/women.jpg),
+    url(../images/billboard.svg);
+  background-repeat: no-repeat;
+  background-position: center 3px, center center;
+  background-size: 292px 125px, 300px 221px;
+  min-height: 221px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+footer div.top article img {
+  display: block;
+  position: absolute;
+  top: 2em;
+  right: 7em;
+  width: 25%;
+}
+
+/**
+ * Copyright
+ */
+footer div.copyright {
+  display: inline-block;
+  color: @color_bright_text;
+}
+
+footer div.copyright a {
+  color: @color_bright_text;
+}

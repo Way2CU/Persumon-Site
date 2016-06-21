@@ -1,0 +1,239 @@
+/**
+ * Content mobile Style Sheet
+ * Prisomon Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+section {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
+  text-align: center;
+  background-color: @color_bright_text;
+  z-index: 0;
+}
+
+section.advertisment a,
+section.table a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  text-decoration: none;
+  background-image: linear-gradient( 180deg, @color_highlight 0%, @color_gradient 100%);
+  color: @color_bright_text;
+  font-weight: 700;
+  width: 150px;
+  position: relative;
+}
+
+section.advertisment a span {
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  min-height: 3em;
+}
+
+section.advertisment a svg,
+section.table a svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.2em;
+  width: 5em;
+  height: 5em;
+  fill: @color_bright_text;
+}
+
+/**
+ * Fixed image section
+ */
+
+div.fixed {
+  text-align: center;
+  padding: 0px calc(~'(100% - 1200px)' / 2);
+  background-image: url(../images/middle-section.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  position: relative;
+  height: 150px;
+}
+
+div.fixed:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+div.fixed span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1em;
+  color: @color_bright_text;
+  background-color: fade(@color_highlight, 80%);
+  font-size: 1.3em;
+  width: 50%;
+}
+
+div.header {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  height: calc(100vw * 0.33);
+  position: relative;
+}
+
+div.header:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+div.header h2 {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1.5em 0.5em;
+  width: 75%;
+  font-size: 1em;
+  margin: 0;
+  background-color: fade(@color_bright_text, 90%);
+}
+
+article {
+  text-align: right;
+  padding: 1em;
+}
+
+article h4,
+article h3 {
+  margin-top: 0;
+  color: @color_gradient;
+}
+
+article h4 {
+  margin: 0;
+}
+
+article ul {
+  padding: 0;
+  padding-right: 1em;
+}
+
+article ul li,
+article p {
+  margin-top: 0;
+  font-size: 1em;
+}
+
+/**
+ * Sponsers gallery
+ */
+
+section.gallery {
+  text-align: center;
+}
+
+section.gallery img {
+  padding: 0.5em;
+}
+
+section.gallery img:last-of-type {
+  padding-bottom: 0;
+}
+
+/**
+ * Mobile forms
+ */
+
+footer div.form_wrap,
+div.form_wrap {
+  background-color: @form_background;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+footer div.form_wrap form,
+div.form_wrap form {
+  padding: 1.5em;
+}
+
+footer div.form_wrap h4,
+div.form_wrap h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: @color_bright_text;
+}
+
+footer div.form_wrap form label,
+div.form_wrap form label {
+  display: block;
+  text-align: right;
+}
+
+footer div.form_wrap form label span,
+div.form_wrap form label span {
+  display: inline-block;
+  vertical-align: middle;
+  color: @color_bright_text;
+  position: relative;
+}
+
+footer div.form_wrap form label span:before,
+div.form_wrap form label span:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../images/form-icons.svg);
+  background-repeat: no-repeat;
+  background-position: -100px 0px;
+  background-size: 200px 50px;
+  width: 50px;
+  height: 50px;
+}
+
+footer div.form_wrap form label:nth-of-type(2) span:before,
+div.form_wrap form label:nth-of-type(2) span:before {
+  background-position: -50px 0px;
+}
+
+footer div.form_wrap form label:nth-of-type(3) span:before,
+div.form_wrap form label:nth-of-type(3) span:before {
+  background-position: 0px 0px;
+}
+
+footer div.form_wrap form label input,
+div.form_wrap form label input {
+  display: block;
+  padding: 0.7em 0.2em;
+  border: 1px solid @color_bright_text;
+  width: calc(100% - 1em - 2px);
+  transition: all 0.3s;
+}
+
+footer div.form_wrap form div.controls,
+div.form_wrap form div.controls {
+  display: block;
+  margin-top: 1em;
+  text-align: center;
+}
+
+footer div.form_wrap form div.controls button,
+div.form_wrap form div.controls button {
+  padding: 0.8em 2em;
+  border: 1px solid @color_bright_text;
+  background-color: fade(@color_highlight, 80%);
+  color: @color_bright_text;
+  transition: all 0.3s;
+}

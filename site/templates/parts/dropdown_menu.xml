@@ -20,7 +20,7 @@
   </div>
 
   <!-- ads group article list -->
-  <div class="_DESKTOP_VERSION ? 'menu red' : 'seperator'" cms:eval="class">
+  <div class="_DESKTOP_VERSION ? 'menu' : 'seperator'" cms:eval="class">
     <cms:module
       name="articles"
       action="show_list"

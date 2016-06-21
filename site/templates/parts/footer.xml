@@ -1,12 +1,8 @@
 <document>
   <footer id="form">
     <div class="top">
-      <article>
+      <cms:mobile>
         <h1><cms:text constant="slogan"/></h1>
-        <!-- logo -->
-        <img src="_BASEURL.'/site/images/logo-vertical.png'"  alt="logo-vertical" cms:eval="src"/>
-
-        <!-- contact information links -->
         <a
           href="'tel:'.urlencode(Language::getText('phone'))"
           cms:eval="href"
@@ -32,6 +28,38 @@
           <cms:text constant="label_mail"/>
         </a>
         <br/>
+      </cms:mobile>
+      <article>
+        <!-- logo -->
+        <img src="_BASEURL.'/site/images/logo-vertical.png'"  alt="logo-vertical" cms:eval="src"/>
+        <cms:desktop>
+        <h1><cms:text constant="slogan"/></h1>
+        <!-- contact information links -->
+          <a
+            href="'tel:'.urlencode(Language::getText('phone'))"
+            cms:eval="href"
+            class="phone"
+            >
+            <cms:text constant="label_phone"/>
+            <cms:svg file="site-sprite.svg" symbol="phone"/>
+          </a>
+          <br/>
+          <a
+            href="javascript:void(0)"
+            class="whatsup"
+            >
+            <cms:text constant="label_whatsup"/>
+            <cms:svg file="site-sprite.svg" symbol="whatsapp"/>
+          </a>
+          <br/>
+          <a
+            href="'mailto:'.urlencode(Language::getText('mail'))"
+            cms:eval="href"
+            class="mail"
+            >
+            <cms:text constant="label_mail"/>
+          </a>
+          <br/>
         <div class="form_wrap">
           <h4><cms:text constant="title_form"/></h4>
           <cms:module
@@ -40,8 +68,19 @@
             text_id="contact"
             />
         </div>
+        </cms:desktop>
       </article>
     </div>
+    <cms:mobile>
+      <div class="form_wrap">
+        <h4><cms:text constant="title_form"/></h4>
+        <cms:module
+          name="contact_form"
+          action="show"
+          text_id="contact"
+          />
+      </div>
+    </cms:mobile>
     <!-- copyright -->
     <cms:template file="stock/copyright.xml">
       <param name="holder" value="copyright_holder"/>
