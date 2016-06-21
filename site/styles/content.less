@@ -8,6 +8,10 @@
 
 section {
   padding: 2em calc(~'(100% - 1200px)' / 2);
+  background-image: linear-gradient(90deg, @color_bright_text 0%, @color_bright_text 100%);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 1200px auto;
   position: relative;
   z-index: 0;
 }
@@ -16,16 +20,16 @@ section.advertisment {
   padding-bottom: 0;
 }
 
-section:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(~'(50% - 600px)');
-  width: 1200px;
-  height: 100%;
-  background-color: @color_bright_text;
-  z-index: -1;
-}
+// section:before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: calc(~'(50% - 600px)');
+//   width: 1200px;
+//   height: 100%;
+//   background-color: @color_bright_text;
+//   z-index: -1;
+// }
 
 section.table {
   display: table;
