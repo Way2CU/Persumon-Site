@@ -7,8 +7,22 @@
       <title>
         <cms:text constant="site_title"/>
         <cms:raw text=" - "/>
-        <cms:text constant="title_advertisment"/>
+        <cms:module
+          name="articles"
+          action="show"
+          text_id="$action"
+          template="parts/inner_page_title.xml"
+          cms:eval="text_id"
+          />
       </title>
+      <!-- Page description-->
+      <cms:module
+        name="articles"
+        action="show"
+        text_id="$action"
+        template="parts/inner_page_description.xml"
+        cms:eval="text_id"
+        />
       <cms:module name="head_tag" action="print_tag"/>
     </head>
 
@@ -31,17 +45,9 @@
             text_id="$action"
             template="stock/article_generic.xml"
             cms:eval="text_id"
-            />
-        </section>
-        <!-- sponsers gallery -->
-        <section class="gallery">
-          <cms:module
-            name="gallery"
-            action="show_image_list"
-            group="$action"
-            template="parts/gallery_images.xml"
-            cms:eval="group"
-            />
+            >
+            <param name="gallery" value=""/>
+          </cms:module>
         </section>
       <!-- Bottom section of the site -->
       <cms:template file="parts/footer.xml"/>

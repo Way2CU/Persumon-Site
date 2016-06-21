@@ -7,7 +7,26 @@
       <title>
         <cms:text constant="site_title"/>
         <cms:raw text=" - "/>
-        <cms:text constant="title_advertisment"/>
+        <cms:if condition="$action == '_default'">
+          <cms:text constant="title_advertisment"/>
+        </cms:if>
+        <cms:if condition="$action != '_default'">
+          <cms:module
+            name="articles"
+            action="show"
+            text_id="$action"
+            template="parts/inner_page_title.xml"
+            cms:eval="text_id"
+            />
+          <!-- Page description-->
+          <cms:module
+            name="articles"
+            action="show"
+            text_id="$action"
+            template="parts/inner_page_description.xml"
+            cms:eval="text_id"
+            />
+        </cms:if>
       </title>
       <cms:module name="head_tag" action="print_tag"/>
     </head>
@@ -47,20 +66,17 @@
           cms:eval="text_id"
           />
         <!-- content of inner page -->
-        <cms:module
-          name="articles"
-          action="show"
-          text_id="$action"
-          template="stock/article_generic.xml"
-          cms:eval="text_id"
-          />
-        <!-- page gallery -->
-        <cms:module
-          name="gallery"
-          action="show_image_list"
-          text_id="$action"
-          template="gallery_images.xml"
-          />
+        <section>
+          <cms:module
+            name="articles"
+            action="show"
+            text_id="$action"
+            template="stock/article_generic.xml"
+            cms:eval="text_id"
+            >
+            <param name="gallery" value=""/>
+          </cms:module>
+        </section>
       </cms:if>
 
       <!-- Bottom section of the site -->

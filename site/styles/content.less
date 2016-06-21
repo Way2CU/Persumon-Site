@@ -208,7 +208,7 @@ div.header h2 {
 }
 
 article {
-  padding: 2em calc(~'(100% - 960px)' / 2);
+  padding: 0em calc(~'(100% - 960px)' / 2);
 }
 
 article h4,
@@ -230,14 +230,19 @@ article p {
  * Sponsers gallery
  */
 
-section.gallery {
+section.gallery,
+div.gallery {
   text-align: center;
 }
 
-section.gallery img {
+section.gallery img,
+div.gallery img {
+  display: inline-block;
+  vertical-align: top;
   padding: 0.5em;
 }
 
-section.gallery img:last-of-type {
+section.gallery img:last-of-type,
+div.gallery img:last-of-type {
   padding-bottom: 0;
 }

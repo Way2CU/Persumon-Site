@@ -139,17 +139,23 @@ article p {
  * Sponsers gallery
  */
 
-section.gallery {
-  text-align: center;
-}
+ section.gallery,
+ div.gallery {
+   text-align: center;
+ }
 
-section.gallery img {
-  padding: 0.5em;
-}
+ section.gallery img,
+ div.gallery img {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 0.4em;
+  padding: 0.2em;
+ }
 
-section.gallery img:last-of-type {
-  padding-bottom: 0;
-}
+ section.gallery img:last-of-type,
+ div.gallery img:last-of-type {
+   padding-bottom: 0;
+ }
 
 /**
  * Mobile forms

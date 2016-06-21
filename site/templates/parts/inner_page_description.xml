@@ -1,0 +1,7 @@
+<document>
+  <meta
+    name="description"
+    content="$params['content'][$language]"
+    cms:eval="content"
+    />
+</document>
